@@ -1,118 +1,125 @@
-# Invisible Thread | Critical Infrastructure Intelligence
+# Invisible Thread
+### Critical Infrastructure Intelligence & Cascading Impact Simulation
 
-> **An interactive geospatial & systemic resilience platform** mapping cascading delays and hidden interdependencies across essential urban services (Hospitals, Emergency Logistics, Road Networks, and Pharmaceutical Supply Chains).
+**Invisible Thread** is an interactive prototype that explores how disruptions in one essential urban service can affect other connected services. It helps users visualize hidden dependencies between road networks, hospitals, pharmacies, and medicine delivery systems.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-[![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+The project focuses on a critical question:
 
----
+**What happens when one disruption creates a chain reaction across essential services?**
 
-## 🌐 Live Deployments
+## The Problem
 
-- **Live Application URL**: [https://ais-pre-hamv7zylewubksce3mgigg-768551743797.asia-southeast1.run.app](https://ais-pre-hamv7zylewubksce3mgigg-768551743797.asia-southeast1.run.app)
-- **Development Preview URL**: [https://ais-dev-hamv7zylewubksce3mgigg-768551743797.asia-southeast1.run.app](https://ais-dev-hamv7zylewubksce3mgigg-768551743797.asia-southeast1.run.app)
+Urban services are interconnected, but disruptions are often considered in isolation. A blocked road, for example, may delay hospital access, affect pharmacy replenishment, or slow medicine deliveries.
 
----
+Understanding these dependencies can help identify potential vulnerabilities and support better-informed response planning.
 
-## 🚀 Deploying to Vercel
+## Our Solution
 
-The repository comes pre-configured with `vercel.json` for seamless Vite Single-Page Application (SPA) routing and zero-configuration asset optimization.
+Invisible Thread represents essential services as a connected network and allows users to explore illustrative disruption scenarios. By tracing dependencies and downstream effects, the prototype demonstrates how a localized disruption may propagate through a wider service network.
 
-### Method 1: 1-Click Git Import (Recommended)
+The goal is to make complex interdependencies easier to understand and help users explore possible mitigation strategies.
 
-1. Push this repository to **GitHub**, **GitLab**, or **Bitbucket**.
-2. Go to [vercel.com/new](https://vercel.com/new).
-3. Import your repository.
-4. Vercel automatically detects the Vite framework and applies the settings:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-5. Click **Deploy**. Your custom Vercel link (`https://<project-name>.vercel.app`) will be live in under 45 seconds!
+## Key Features
 
-### Method 2: Deploy via Vercel CLI
+### 1. Home
+Introduces the problem, project objectives, and the relationship between connected essential services.
 
-In your terminal / project folder:
+### 2. Explorer
+Provides a visual representation of the infrastructure network, its service nodes, and their dependencies.
+
+### 3. Simulator
+Allows users to explore disruption scenarios and observe potential cascading impacts across connected services.
+
+### 4. Insights
+Presents visual summaries and scenario-related indicators to help users understand network vulnerabilities and potential service impacts.
+
+### 5. About & Methodology
+Explains the motivation, conceptual approach, intended use, and limitations of the project.
+
+### 6. Response Planning
+Highlights possible mitigation approaches, including exploring alternative routes where supported by the prototype.
+
+## How It Works
+
+1. **Represent the network:** Model essential services as connected nodes and dependencies.
+2. **Introduce a disruption:** Select a supported scenario or disruption severity.
+3. **Trace dependencies:** Follow the connections between affected services.
+4. **Explore cascading impacts:** Observe the potential downstream consequences shown by the simulation.
+5. **Consider mitigation:** Examine available response options and alternative routes.
+
+## Technology Stack
+
+- **Frontend:** React
+- **Build Tool:** Vite
+- **Languages:** JavaScript / TypeScript, depending on the module
+- **Visualization:** SVG-based network and data visualizations
+- **Deployment:** Vercel
+- **Development Assistance:** Google AI Studio
+
+*The exact libraries and implementation details may vary across modules.*
+
+## Getting Started
+
+### Prerequisites
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
 
 ```bash
-# 1. Install or run Vercel CLI
-npx vercel
-
-# 2. Follow the interactive prompts:
-# - Set up and deploy? [Y]
-# - Which scope? [Your Account]
-# - Link to existing project? [N]
-# - Project name? [invisible-thread]
-# - In which directory is your code located? [./]
-
-# 3. For immediate Production deployment:
-npx vercel --prod
+git clone https://github.com/Vandana1011/Invisible_Thread1.git
+cd Invisible_Thread1
 ```
 
-### Method 3: Automated CI/CD with Vercel Token
-
-If deploying from CI/CD (GitHub Actions, GitLab CI, or terminal script):
+Install dependencies:
 
 ```bash
-# Set your Vercel authentication token
-export VERCEL_TOKEN="your_vercel_token_here"
-
-# Deploy directly to production without prompts
-npx vercel --token $VERCEL_TOKEN --prod --yes
-```
-
----
-
-## 🛠️ Key Modules & Architecture
-
-1. **Home (`/`)**:
-   - High-impact mission narrative with systemic risk counter, core problem framing, and seamless navigation.
-2. **Explorer (`02_Explorer`)**:
-   - Interactive SVG-driven geospatial network map.
-   - Highlights critical infrastructure nodes (hospitals, arterial highways, supply depots, emergency pharmacies).
-   - High-contrast, scalable district naming with dynamic vulnerability ratings and dependency badges.
-3. **Simulator (`03_Simulator`)**:
-   - Live systemic failure cascade simulator.
-   - Inject choke points (flooding, route severance, grid outage) and observe ripple delays across downstream hospitals and delivery nodes.
-4. **Insights (`04_Insights`)**:
-   - **Service Performance**: Interactive latency/throughput monitors across Roads, Medical Hubs, Pharmacies, and Logistics with stress-test scenario modes (*Minor, Moderate, Severe*).
-   - **Impact Analysis**: Dynamic SVG time-series curves with interactive crosshairs, timeframe switches (24h, 7d, 30d), and pinpoint diagnostics.
-5. **About (`05_About`)**:
-   - Methodology breakdown, network graph architecture, and structured boundary-fitted topology view.
-6. **Closing (`06_Closing`)**:
-   - Policy recommendations, mitigation levers, and key resilient infrastructure takeaways.
-
----
-
-## 💻 Local Development
-
-```bash
-# Install dependencies
 npm install
+```
 
-# Start Vite dev server on http://localhost:3000
+Start the development server:
+
+```bash
 npm run dev
+```
 
-# Run oxlint check
-npm run lint
+Open the local URL displayed in the terminal.
 
-# Build production bundle to /dist
+### Production Build
+
+```bash
 npm run build
 ```
 
----
+The production build output is generated in the `dist` directory when configured as a standard Vite project.
 
-## ⚙️ Configuration Files
+## Project Limitations
 
-- `vercel.json` — Pre-configured SPA rewrite rules to ensure deep-linking and browser navigation without 404 errors:
-  ```json
-  {
-    "framework": "vite",
-    "buildCommand": "npm run build",
-    "outputDirectory": "dist",
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-  }
-  ```
-- `vite.config.ts` — Optimized bundle splits and fast-refresh config.
-- `metadata.json` — Application capabilities and permission manifest.
+- Scenario outputs should be treated as illustrative unless supported by validated data and a documented calculation method.
+- The prototype should not be considered a live emergency monitoring or dispatch system unless it is connected to verified real-time data sources.
+- Simulated impacts depend on the assumptions, dependency relationships, and parameters used by the implementation.
+- Alternative routes and estimated delays should not be interpreted as operational recommendations without validation against real road conditions and travel data.
+
+## Future Scope
+
+- Integrate verified infrastructure and transport datasets.
+- Validate dependency relationships with domain experts.
+- Improve scenario calibration and uncertainty reporting.
+- Evaluate alternative routes using reliable travel-time and accessibility data.
+- Expand testing, accessibility, and mobile responsiveness.
+
+## Live Demo
+
+**Live Application:** https://invisible-threadaxion.vercel.app/
+
+## Project Information
+
+**Project:** Invisible Thread  
+**Hackathon:** AXION Hackathon  
+**Repository:** [Vandana1011/Invisible_Thread1](https://github.com/Vandana1011/Invisible_Thread1)
+
+## Acknowledgements
+
+This project was developed with AI-assisted development tools. The implementation, outputs, and limitations should be reviewed and validated before real-world use.
