@@ -1,0 +1,7 @@
+{
+  "name": "Invisible Thread",
+  "description": "Invisible Thread — explore hidden dependencies and cascading delays across essential services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
